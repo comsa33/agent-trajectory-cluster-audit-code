@@ -8,7 +8,7 @@ authors:
     given-names: "Ruo"
   - family-names: "Oh"
     given-names: "Taeyeon"
-repository-code: "https://github.com/ruo-lee/agent-trajectory-cluster-audit-code"
+repository-code: "https://github.com/comsa33/agent-trajectory-cluster-audit-code"
 license: "MIT"
 keywords:
   - "LLM agents"

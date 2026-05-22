@@ -1,0 +1,31 @@
+{
+  "title": "Agent Trajectory Cluster Audit",
+  "upload_type": "software",
+  "description": "Reproducibility code for a multi-dataset validation protocol auditing unsupervised LLM-agent trajectory clustering claims.",
+  "creators": [
+    {
+      "name": "Lee, Ruo",
+      "affiliation": "aSSIST University"
+    },
+    {
+      "name": "Oh, Taeyeon",
+      "affiliation": "aSSIST University"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "LLM agents",
+    "trajectory clustering",
+    "cluster validation",
+    "agent observability",
+    "empirical audit"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/comsa33/agent-trajectory-cluster-audit-code",
+      "scheme": "url"
+    }
+  ]
+}
