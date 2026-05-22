@@ -1,6 +1,6 @@
 experiment: aftraj_math
-config_hash: 6c5fa8ab77a0
-timestamp_utc: '2026-05-18T01:32:34Z'
+config_hash: 7d5203244e09
+timestamp_utc: '2026-05-22T08:22:17Z'
 python: 3.11.11
 platform: macOS-26.4-arm64-arm-64bit
 seed: 42
@@ -8,10 +8,10 @@ config:
   experiment:
     name: aftraj_math
     seed: 42
-    output_dir: ./outputs/aftraj_math
+    output_dir: outputs/aftraj_math
   data:
     dataset_type: aftraj
-    input_dir: ./data/external/aftraj
+    input_dir: ../trajectory_failure_clustering/data/external/aftraj
     max_text_chars: 6000
     include_dirs: null
     exclude_dirs: null
@@ -25,7 +25,7 @@ config:
     sequential: true
     behavioral: true
   encoder:
-    type: sentence_transformer
+    type: none
     model: sentence-transformers/all-MiniLM-L6-v2
     batch_size: 32
   clustering:
@@ -77,7 +77,7 @@ metrics:
   calinski_harabasz: 216.15400316263296
   mode: feature
   clusterer: auto_kmeans
-  encoder: sentence_transformer
+  encoder: none
   feature_dim: 26
   text_dim: 0
   extras:

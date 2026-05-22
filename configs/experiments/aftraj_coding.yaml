@@ -9,6 +9,9 @@ data:
   filter_by:
     domain: coding
 
+encoder:
+  type: none
+
 clustering:
   type: auto_kmeans
   mode: feature

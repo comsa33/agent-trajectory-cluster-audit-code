@@ -1,7 +1,7 @@
 {
   "experiment": "aftraj_full",
-  "config_hash": "9901cfd29c1d",
-  "timestamp_utc": "2026-05-18T01:32:31Z",
+  "config_hash": "130f5c27e27c",
+  "timestamp_utc": "2026-05-22T08:22:58Z",
   "python": "3.11.11",
   "platform": "macOS-26.4-arm64-arm-64bit",
   "seed": 42,
@@ -9,11 +9,11 @@
     "experiment": {
       "name": "aftraj_full",
       "seed": 42,
-      "output_dir": "./outputs/aftraj_full"
+      "output_dir": "outputs/aftraj_full"
     },
     "data": {
       "dataset_type": "aftraj",
-      "input_dir": "./data/external/aftraj",
+      "input_dir": "../trajectory_failure_clustering/data/external/aftraj",
       "max_text_chars": 6000,
       "include_dirs": null,
       "exclude_dirs": null,
