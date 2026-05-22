@@ -122,8 +122,12 @@ above after downloading the datasets.
 
 ## Citation
 
-If you use this code, cite the archived Zenodo release DOI once available. The
-GitHub repository alone is not the archival citation target.
+If you use this code, cite the archived Zenodo release:
+
+> Lee, R., & Oh, T. (2026). Agent Trajectory Cluster Audit (v0.1.0).
+> Zenodo. https://doi.org/10.5281/zenodo.20344064
+
+The GitHub repository alone is not the archival citation target.
 
 ## License
 

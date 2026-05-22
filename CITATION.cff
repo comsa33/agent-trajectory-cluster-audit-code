@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code, cite the archived Zenodo release DOI once available."
+message: "If you use this code, cite the archived Zenodo release."
 title: "Agent Trajectory Cluster Audit"
 version: "0.1.0"
 date-released: "2026-05-22"
@@ -9,6 +9,7 @@ authors:
   - family-names: "Oh"
     given-names: "Taeyeon"
 repository-code: "https://github.com/comsa33/agent-trajectory-cluster-audit-code"
+doi: "10.5281/zenodo.20344064"
 license: "MIT"
 keywords:
   - "LLM agents"
