@@ -1,0 +1,48 @@
+experiment:
+  name: aftraj_full
+  output_dir: ./outputs/aftraj_full
+
+data:
+  dataset_type: aftraj
+  input_dir: ./data/external/aftraj
+  splits: [safe, unsafe]
+
+features:
+  structural: true
+  sequential: true
+  behavioral: true
+
+encoder:
+  type: none
+
+clustering:
+  type: auto_kmeans
+  mode: feature
+  k_search_range: [3, 12]
+
+analysis:
+  pathology_rule_set: default
+  correlation_targets:
+    - final_correct
+    - n_iters
+    - empty_observation_ratio
+    - repeated_search_keyword_ratio
+    - tool_transition_entropy
+    - hypothesis_persistence
+  # Validate clusters against ground-truth labels carried by the loader.
+  label_columns:
+    - label_safe_unsafe
+    - label_mistake_agent
+    - label_unsafe_source
+    - label_domain
+  # Stratify by domain so we can see whether the per-cluster signal
+  # survives after task-domain confound is held constant.
+  stratify_by: label_domain
+  baselines:
+    - random
+    - quantile:n_iters
+    - quantile:total_tool_calls
+    - quantile:retry_burst_max
+    - quantile:tool_transition_entropy
+    - oracle:label_domain
+  k_sensitivity: [2, 3, 4, 5, 6, 8, 10, 12, 16]

@@ -1,0 +1,3 @@
+framework,n,n_clusters_in_group,n_root_cause_classes,purity,nmi,ari
+magentic,44,3,7,0.45454545454545453,0.20581141813429335,0.05807480049808856
+tau_retail,29,1,7,0.27586206896551724,0.0,0.0

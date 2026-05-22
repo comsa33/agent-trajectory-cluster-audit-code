@@ -1,0 +1,104 @@
+experiment: aftraj_math
+config_hash: 6c5fa8ab77a0
+timestamp_utc: '2026-05-18T01:32:34Z'
+python: 3.11.11
+platform: macOS-26.4-arm64-arm-64bit
+seed: 42
+config:
+  experiment:
+    name: aftraj_math
+    seed: 42
+    output_dir: ./outputs/aftraj_math
+  data:
+    dataset_type: aftraj
+    input_dir: ./data/external/aftraj
+    max_text_chars: 6000
+    include_dirs: null
+    exclude_dirs: null
+    splits:
+    - safe
+    - unsafe
+    filter_by:
+      domain: math
+  features:
+    structural: true
+    sequential: true
+    behavioral: true
+  encoder:
+    type: sentence_transformer
+    model: sentence-transformers/all-MiniLM-L6-v2
+    batch_size: 32
+  clustering:
+    type: auto_kmeans
+    mode: feature
+    n_clusters: 6
+    k_search_range:
+    - 3
+    - 10
+    min_cluster_size: 5
+  analysis:
+    pathology_rule_set: default
+    correlation_targets:
+    - final_correct
+    - n_iters
+    - empty_observation_ratio
+    - tool_transition_entropy
+    - hypothesis_persistence
+    label_columns:
+    - label_safe_unsafe
+    - label_mistake_agent
+    - label_unsafe_source
+    exemplar_count: 3
+    baselines:
+    - random
+    - quantile:n_iters
+    - quantile:total_tool_calls
+    - quantile:retry_burst_max
+    - quantile:tool_transition_entropy
+    k_sensitivity:
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 8
+    - 10
+    - 12
+  reporting:
+    scatter: true
+    metrics_bar: true
+    pathology_distribution: true
+    correlation_table: true
+    manifest: true
+metrics:
+  n_trajectories: 793
+  n_clusters: 8
+  silhouette: 0.34011498140285934
+  calinski_harabasz: 216.15400316263296
+  mode: feature
+  clusterer: auto_kmeans
+  encoder: sentence_transformer
+  feature_dim: 26
+  text_dim: 0
+  extras:
+    selected_k: 8
+    k_silhouette_scores:
+      3: 0.2980717602026155
+      4: 0.2887431454374272
+      5: 0.3135750862511483
+      6: 0.3172463394713899
+      7: 0.32485497300776905
+      8: 0.34011498140296276
+      9: 0.32606500780295433
+      10: 0.32640730769683474
+artifacts:
+  trajectory_features: outputs/aftraj_math/trajectory_features.csv
+  cluster_assignments: outputs/aftraj_math/cluster_assignments.csv
+  cluster_summary: outputs/aftraj_math/cluster_summary.csv
+  cluster_correlation: outputs/aftraj_math/cluster_correlation.csv
+  cluster_label_validation: outputs/aftraj_math/cluster_label_validation.csv
+  cluster_baseline_comparison: outputs/aftraj_math/cluster_baseline_comparison.csv
+  k_sensitivity: outputs/aftraj_math/k_sensitivity.csv
+  cluster_scatter: outputs/aftraj_math/cluster_scatter.png
+  cluster_metrics: outputs/aftraj_math/cluster_metrics.png
+  pathology_distribution: outputs/aftraj_math/pathology_distribution.png

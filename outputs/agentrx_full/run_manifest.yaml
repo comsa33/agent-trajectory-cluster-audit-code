@@ -1,0 +1,99 @@
+experiment: agentrx_full
+config_hash: 142aa99ede94
+timestamp_utc: '2026-05-18T01:32:44Z'
+python: 3.11.11
+platform: macOS-26.4-arm64-arm-64bit
+seed: 42
+config:
+  experiment:
+    name: agentrx_full
+    seed: 42
+    output_dir: ./outputs/agentrx_full
+  data:
+    dataset_type: agentrx
+    input_dir: ./data/external/agentrx
+    max_text_chars: 6000
+    include_dirs: null
+    exclude_dirs: null
+  features:
+    structural: true
+    sequential: true
+    behavioral: true
+  encoder:
+    type: none
+    model: sentence-transformers/all-MiniLM-L6-v2
+    batch_size: 32
+  clustering:
+    type: auto_kmeans
+    mode: feature
+    n_clusters: 6
+    k_search_range:
+    - 2
+    - 6
+    min_cluster_size: 5
+  analysis:
+    pathology_rule_set: default
+    correlation_targets:
+    - n_iters
+    - empty_observation_ratio
+    - tool_transition_entropy
+    - hypothesis_persistence
+    label_columns:
+    - label_framework
+    - label_root_cause_category
+    - label_num_failures
+    exemplar_count: 3
+    stratify_by: label_framework
+    stratify_min_group_size: 20
+    multilabel_columns:
+    - label_failure_categories_list
+    baselines:
+    - random
+    - quantile:n_iters
+    - quantile:total_tool_calls
+    - quantile:retry_burst_max
+    - quantile:tool_transition_entropy
+    - oracle:label_framework
+    k_sensitivity:
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  reporting:
+    scatter: true
+    metrics_bar: true
+    pathology_distribution: true
+    correlation_table: true
+    manifest: true
+metrics:
+  n_trajectories: 73
+  n_clusters: 4
+  silhouette: 0.38052075560269794
+  calinski_harabasz: 40.43745145179354
+  mode: feature
+  clusterer: auto_kmeans
+  encoder: none
+  feature_dim: 26
+  text_dim: 0
+  extras:
+    selected_k: 4
+    k_silhouette_scores:
+      2: 0.3420393243838651
+      3: 0.35721997479590184
+      4: 0.3805207556026979
+      5: 0.3501803815427127
+      6: 0.2914903583733924
+artifacts:
+  trajectory_features: outputs/agentrx_full/trajectory_features.csv
+  cluster_assignments: outputs/agentrx_full/cluster_assignments.csv
+  cluster_summary: outputs/agentrx_full/cluster_summary.csv
+  cluster_correlation: outputs/agentrx_full/cluster_correlation.csv
+  cluster_label_validation: outputs/agentrx_full/cluster_label_validation.csv
+  cluster_label_validation_stratified: outputs/agentrx_full/cluster_label_validation_stratified.csv
+  cluster_multilabel_validation: outputs/agentrx_full/cluster_multilabel_validation.csv
+  cluster_baseline_comparison: outputs/agentrx_full/cluster_baseline_comparison.csv
+  k_sensitivity: outputs/agentrx_full/k_sensitivity.csv
+  cluster_scatter: outputs/agentrx_full/cluster_scatter.png
+  cluster_metrics: outputs/agentrx_full/cluster_metrics.png
+  pathology_distribution: outputs/agentrx_full/pathology_distribution.png

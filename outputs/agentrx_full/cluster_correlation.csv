@@ -1,0 +1,5 @@
+target,test,statistic,p_value,effect_size,effect_size_metric
+n_iters,anova_f,176.6512072865628,2.633207444644076e-32,0.8847990938167095,eta_squared
+empty_observation_ratio,anova_f,2.591037385622302,0.05969819874093919,0.10124784496145584,eta_squared
+tool_transition_entropy,anova_f,7.297792673772728,0.0002546892766224758,0.24086879042149026,eta_squared
+hypothesis_persistence,anova_f,151.37466150069636,2.7841029142962177e-30,0.8681001023769258,eta_squared

@@ -1,0 +1,54 @@
+experiment:
+  name: agenterrorbench_full
+  output_dir: ./outputs/agenterrorbench_full
+
+data:
+  dataset_type: agenterrorbench
+  input_dir: ./data/external/agenterrorbench
+  splits: [train, validation, test]
+
+features:
+  structural: true
+  sequential: true
+  behavioral: true
+
+encoder:
+  type: none
+
+clustering:
+  type: auto_kmeans
+  mode: feature
+  k_search_range: [3, 10]
+
+analysis:
+  pathology_rule_set: default
+  correlation_targets:
+    - final_correct
+    - n_iters
+    - empty_observation_ratio
+    - tool_transition_entropy
+    - hypothesis_persistence
+  # AgentErrorBench-specific ground truth carried by the loader.
+  label_columns:
+    - label_task_type
+    - label_llm_model
+    - label_critical_failure_module
+    - label_failure_type_first
+    - label_failure_module_first
+    - label_won
+  # Stratify by task family so we can see whether failure_type alignment
+  # survives after task-family confound is removed.
+  stratify_by: label_task_type
+  # AEB carries multi-tag failure_types lists; per-tag binary validation
+  # is fairer than picking the first tag.
+  multilabel_columns:
+    - label_failure_types_list
+    - label_failure_modules_list
+  baselines:
+    - random
+    - quantile:n_iters
+    - quantile:total_tool_calls
+    - quantile:retry_burst_max
+    - quantile:tool_transition_entropy
+    - oracle:label_task_type
+  k_sensitivity: [2, 3, 4, 5, 6, 8, 10, 12]

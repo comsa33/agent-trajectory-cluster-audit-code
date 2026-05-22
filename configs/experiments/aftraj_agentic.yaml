@@ -1,0 +1,28 @@
+experiment:
+  name: aftraj_agentic
+  output_dir: ./outputs/aftraj_agentic
+
+data:
+  dataset_type: aftraj
+  input_dir: ./data/external/aftraj
+  splits: [safe, unsafe]
+  filter_by:
+    domain: agentic
+
+clustering:
+  type: auto_kmeans
+  mode: feature
+  k_search_range: [3, 10]
+
+analysis:
+  label_columns:
+    - label_safe_unsafe
+    - label_mistake_agent
+    - label_unsafe_source
+  baselines:
+    - random
+    - quantile:n_iters
+    - quantile:total_tool_calls
+    - quantile:retry_burst_max
+    - quantile:tool_transition_entropy
+  k_sensitivity: [2, 3, 4, 5, 6, 8, 10, 12]

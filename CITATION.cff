@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, cite the archived Zenodo release DOI once available."
+title: "Agent Trajectory Cluster Audit"
+version: "0.1.0"
+date-released: "2026-05-22"
+authors:
+  - family-names: "Lee"
+    given-names: "Ruo"
+  - family-names: "Oh"
+    given-names: "Taeyeon"
+repository-code: "https://github.com/ruo-lee/agent-trajectory-cluster-audit-code"
+license: "MIT"
+keywords:
+  - "LLM agents"
+  - "trajectory clustering"
+  - "cluster validation"
+  - "agent observability"
+  - "empirical audit"

@@ -1,0 +1,55 @@
+# Base configuration. Experiment YAMLs override specific keys via deep-merge.
+experiment:
+  name: default
+  seed: 42
+  output_dir: ./outputs/default
+
+data:
+  dataset_type: aftraj             # aftraj | legacy_flat_json | ... (see DATASET_LOADERS)
+  input_dir: ./data/external/aftraj
+  max_text_chars: 6000
+  # Optional substring filters on the trajectory's source directory name.
+  include_dirs: null
+  exclude_dirs: null
+
+features:
+  structural: true
+  sequential: true
+  behavioral: true
+
+encoder:
+  type: sentence_transformer       # sentence_transformer | tfidf | none | sequence
+  model: sentence-transformers/all-MiniLM-L6-v2
+  batch_size: 32
+
+clustering:
+  type: kmeans                     # kmeans | auto_kmeans | hdbscan
+  mode: hybrid                     # feature | text | hybrid
+  n_clusters: 6
+  k_search_range: [3, 12]          # used when type == auto_kmeans
+  min_cluster_size: 5              # used when type == hdbscan
+
+analysis:
+  pathology_rule_set: default
+  correlation_targets:
+    - final_correct
+    - n_iters
+    - empty_observation_ratio
+    - tool_transition_entropy
+    - hypothesis_persistence
+  # External labels carried by the active loader (e.g. AFTraj exposes
+  # safe_unsafe / mistake_agent / unsafe_source / domain). Missing columns
+  # are skipped silently so this default is safe across datasets.
+  label_columns:
+    - label_safe_unsafe
+    - label_mistake_agent
+    - label_unsafe_source
+    - label_domain
+  exemplar_count: 3
+
+reporting:
+  scatter: true
+  metrics_bar: true
+  pathology_distribution: true
+  correlation_table: true
+  manifest: true

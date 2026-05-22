@@ -1,0 +1,51 @@
+experiment:
+  name: agentrx_full
+  output_dir: ./outputs/agentrx_full
+
+data:
+  dataset_type: agentrx
+  input_dir: ./data/external/agentrx
+
+features:
+  structural: true
+  sequential: true
+  behavioral: true
+
+encoder:
+  type: none
+
+clustering:
+  type: auto_kmeans
+  mode: feature
+  # n=73 is small; cap search range.
+  k_search_range: [2, 6]
+
+analysis:
+  pathology_rule_set: default
+  correlation_targets:
+    - n_iters
+    - empty_observation_ratio
+    - tool_transition_entropy
+    - hypothesis_persistence
+  # Two label families: framework (sanity) and root_cause_category (the
+  # real ask). num_failures is included as a continuous outcome.
+  label_columns:
+    - label_framework
+    - label_root_cause_category
+    - label_num_failures
+  # Stratify by framework to ask whether cluster signal is just
+  # "magentic vs tau_retail" or survives within each.
+  stratify_by: label_framework
+  stratify_min_group_size: 20
+  # Symptom-side analysis: per-category binary purity for the full
+  # failures list (symptoms), separate from root_cause_category.
+  multilabel_columns:
+    - label_failure_categories_list
+  baselines:
+    - random
+    - quantile:n_iters
+    - quantile:total_tool_calls
+    - quantile:retry_burst_max
+    - quantile:tool_transition_entropy
+    - oracle:label_framework
+  k_sensitivity: [2, 3, 4, 5, 6]

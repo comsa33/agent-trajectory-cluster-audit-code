@@ -1,0 +1,81 @@
+root_cause_category,feature,cohens_d,abs_d,p_value
+Guardrails Triggered,avg_thought_length,1.6110411093919907,1.6110411093919907,0.005274178462257097
+Guardrails Triggered,reasoning_depth_growth,-1.1989888551341612,1.1989888551341612,0.1163705115620035
+Guardrails Triggered,finalization_lateness,1.0937895453936102,1.0937895453936102,0.12737970035093227
+Guardrails Triggered,avg_observation_length,1.0915340241468012,1.0915340241468012,0.06419701509521528
+Guardrails Triggered,unique_tool_count,-0.9452411604524763,0.9452411604524763,0.004255823381504408
+Guardrails Triggered,tool_path_length_norm,0.9078665341831214,0.9078665341831214,3.771974772665166e-09
+Guardrails Triggered,thought_drift_slope,-0.8542943885887399,0.8542943885887399,0.12835281895670747
+Guardrails Triggered,tool_transition_entropy,-0.4762566248728155,0.4762566248728155,0.24961595328501782
+Guardrails Triggered,n_iters,-0.45865176699385635,0.45865176699385635,0.09483805431072345
+Guardrails Triggered,repeated_tool_ratio,0.44118304860383756,0.44118304860383756,0.12518187943285974
+Guardrails Triggered,empty_observation_burst,-0.4372905329781557,0.4372905329781557,0.1414992909138625
+Guardrails Triggered,retry_burst_max,-0.42688455471905007,0.42688455471905007,0.10774271102250954
+Guardrails Triggered,total_tool_calls,-0.3413088356190042,0.3413088356190042,0.1867774220850765
+Guardrails Triggered,hypothesis_persistence,-0.29757015328466546,0.29757015328466546,0.15098346518069428
+Guardrails Triggered,exploration_index,-0.21925617119569965,0.21925617119569965,0.48204870577097575
+Guardrails Triggered,retry_burst_ratio,0.10058960732170022,0.10058960732170022,0.7817225322383053
+Guardrails Triggered,fixation_score,0.07325012389394996,0.07325012389394996,0.819570017367232
+Guardrails Triggered,tool_bigram_diversity,0.06661972514390717,0.06661972514390717,0.8461679234113134
+Guardrails Triggered,empty_observation_ratio,0.06534707381404778,0.06534707381404778,0.7319285760030507
+Guardrails Triggered,tokens,0.0,0.0,
+Guardrails Triggered,time_s,0.0,0.0,
+Guardrails Triggered,repeated_search_keyword_ratio,0.0,0.0,
+Guardrails Triggered,hint_count,0.0,0.0,
+Guardrails Triggered,retrieval_positive_count,0.0,0.0,
+Guardrails Triggered,retrieval_negative_count,0.0,0.0,
+Guardrails Triggered,search_keyword_diversity,0.0,0.0,
+Instruction/Plan Adherence Failure,hypothesis_persistence,3.7130458942048583,3.7130458942048583,3.2708698178548435e-05
+Instruction/Plan Adherence Failure,retry_burst_max,3.0299419047877523,3.0299419047877523,3.919930698767998e-05
+Instruction/Plan Adherence Failure,n_iters,2.9844958743995735,2.9844958743995735,4.3222824369691034e-05
+Instruction/Plan Adherence Failure,total_tool_calls,2.961433864282677,2.961433864282677,2.842862208662484e-05
+Instruction/Plan Adherence Failure,tool_bigram_diversity,-1.6338270013291367,1.6338270013291367,7.022725891696741e-19
+Instruction/Plan Adherence Failure,retry_burst_ratio,1.4143477603416856,1.4143477603416856,4.0769005359027516e-16
+Instruction/Plan Adherence Failure,exploration_index,-1.2963841674951557,1.2963841674951557,1.434115919787455e-14
+Instruction/Plan Adherence Failure,fixation_score,1.2294090248097858,1.2294090248097858,1.860188704416533e-11
+Instruction/Plan Adherence Failure,empty_observation_burst,1.1173965275771973,1.1173965275771973,2.758351956361377e-08
+Instruction/Plan Adherence Failure,finalization_lateness,-1.0933006743735159,1.0933006743735159,9.922842219203354e-12
+Instruction/Plan Adherence Failure,repeated_tool_ratio,0.8899692542179826,0.8899692542179826,4.3837400352680204e-09
+Instruction/Plan Adherence Failure,tool_path_length_norm,0.8888340326768361,0.8888340326768361,4.109152029509085e-09
+Instruction/Plan Adherence Failure,avg_thought_length,0.4814167149659443,0.4814167149659443,0.0011723966036413299
+Instruction/Plan Adherence Failure,thought_drift_slope,0.4338124975429809,0.4338124975429809,0.0015349267852815512
+Instruction/Plan Adherence Failure,empty_observation_ratio,0.3772447278198338,0.3772447278198338,0.007611378924166589
+Instruction/Plan Adherence Failure,reasoning_depth_growth,0.3214476870457968,0.3214476870457968,0.016615814076530164
+Instruction/Plan Adherence Failure,avg_observation_length,0.2161543754083977,0.2161543754083977,0.6507473786706608
+Instruction/Plan Adherence Failure,unique_tool_count,0.21209145963420392,0.21209145963420392,0.5786589477134755
+Instruction/Plan Adherence Failure,tool_transition_entropy,0.07676173121274024,0.07676173121274024,0.7207897821474268
+Instruction/Plan Adherence Failure,tokens,0.0,0.0,
+Instruction/Plan Adherence Failure,time_s,0.0,0.0,
+Instruction/Plan Adherence Failure,repeated_search_keyword_ratio,0.0,0.0,
+Instruction/Plan Adherence Failure,hint_count,0.0,0.0,
+Instruction/Plan Adherence Failure,retrieval_positive_count,0.0,0.0,
+Instruction/Plan Adherence Failure,retrieval_negative_count,0.0,0.0,
+Instruction/Plan Adherence Failure,search_keyword_diversity,0.0,0.0,
+Intent Plan Misalignment,repeated_tool_ratio,-0.6256227360913398,0.6256227360913398,0.13092203615827722
+Intent Plan Misalignment,fixation_score,-0.5596352915839748,0.5596352915839748,0.17356928655007678
+Intent Plan Misalignment,exploration_index,0.5344440184143565,0.5344440184143565,0.17145887225419087
+Intent Plan Misalignment,avg_thought_length,-0.5157844470352717,0.5157844470352717,0.11393498253329008
+Intent Plan Misalignment,tool_path_length_norm,-0.5004120624458074,0.5004120624458074,0.14939801524414506
+Intent Plan Misalignment,hypothesis_persistence,-0.4863820177276506,0.4863820177276506,0.012632452496696983
+Intent Plan Misalignment,retry_burst_ratio,-0.428190731338126,0.428190731338126,0.2212229422270352
+Intent Plan Misalignment,total_tool_calls,-0.4211960937432472,0.4211960937432472,0.042941691140140355
+Intent Plan Misalignment,n_iters,-0.39533119932312394,0.39533119932312394,0.04371183581969308
+Intent Plan Misalignment,tool_bigram_diversity,0.3943736974547256,0.3943736974547256,0.26157855091249976
+Intent Plan Misalignment,retry_burst_max,-0.39134582889211034,0.39134582889211034,0.0567712175626014
+Intent Plan Misalignment,thought_drift_slope,0.384531439317664,0.384531439317664,0.05748663643339176
+Intent Plan Misalignment,unique_tool_count,0.37413721109430587,0.37413721109430587,0.2800165110942297
+Intent Plan Misalignment,avg_observation_length,-0.32472242939627155,0.32472242939627155,0.21043645472579262
+Intent Plan Misalignment,reasoning_depth_growth,0.3100824914732974,0.3100824914732974,0.03341338227627743
+Intent Plan Misalignment,empty_observation_ratio,-0.299365904507921,0.299365904507921,0.41209146766649446
+Intent Plan Misalignment,tool_transition_entropy,0.11599784947841708,0.11599784947841708,0.6294631208884026
+Intent Plan Misalignment,empty_observation_burst,0.051755913580527155,0.051755913580527155,0.8481054075660425
+Intent Plan Misalignment,finalization_lateness,-0.050510761026670827,0.050510761026670827,0.8005741335112696
+Intent Plan Misalignment,tokens,0.0,0.0,
+Intent Plan Misalignment,time_s,0.0,0.0,
+Intent Plan Misalignment,repeated_search_keyword_ratio,0.0,0.0,
+Intent Plan Misalignment,hint_count,0.0,0.0,
+Intent Plan Misalignment,retrieval_positive_count,0.0,0.0,
+Intent Plan Misalignment,retrieval_negative_count,0.0,0.0,
+Intent Plan Misalignment,search_keyword_diversity,0.0,0.0,
+Misinterpretation of Tool Output,empty_observation_burst,-0.5788819273172854,0.5788819273172854,0.0035600587752451372
+Misinterpretation of Tool Output,thought_drift_slope,-0.4825688912140244,0.4825688912140244,0.12395812205459501

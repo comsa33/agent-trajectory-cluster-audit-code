@@ -1,0 +1,12 @@
+experiment:
+  name: text_tfidf
+  output_dir: ./outputs/text_tfidf
+
+encoder:
+  type: tfidf
+  max_features: 4096
+
+clustering:
+  type: auto_kmeans
+  mode: text
+  k_search_range: [3, 10]

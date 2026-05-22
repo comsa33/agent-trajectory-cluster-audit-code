@@ -1,0 +1,12 @@
+experiment:
+  name: hybrid_minilm
+  output_dir: ./outputs/hybrid_minilm
+
+encoder:
+  type: sentence_transformer
+  model: sentence-transformers/all-MiniLM-L6-v2
+
+clustering:
+  type: kmeans
+  mode: hybrid
+  n_clusters: 6

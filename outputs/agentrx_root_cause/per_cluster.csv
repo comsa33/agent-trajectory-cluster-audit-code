@@ -1,0 +1,5 @@
+cluster_id,size,frameworks,dominant_root_cause,dominant_root_cause_share,top_symptoms,avg_n_iters,avg_total_tool_calls,avg_tool_transition_entropy
+0,13,magentic:13,Instruction/Plan Adherence Failure,0.5384615384615384,Instruction/Plan Adherence Failure:171; Intent Plan Misalignment:14; Intent not supported:11,108.15384615384616,108.15384615384616,2.743173111971349
+1,29,tau_retail:29,Underspecified User Intent,0.27586206896551724,Underspecified User Intent:10; Misinterpretation of Tool Output:8; Intent Plan Misalignment:8,17.344827586206897,9.448275862068966,2.592945287022581
+2,26,magentic:26,Misinterpretation of Tool Output,0.38461538461538464,Instruction/Plan Adherence Failure:24; Misinterpretation of Tool Output:17; Guardrails Triggered:15,27.846153846153847,27.846153846153847,2.6296691338519107
+3,5,magentic:5,Guardrails Triggered,0.6,Guardrails Triggered:3; Instruction/Plan Adherence Failure:2; Misinterpretation of Tool Output:2,5.4,5.4,1.7722981278455887

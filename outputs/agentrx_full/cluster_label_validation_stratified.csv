@@ -1,0 +1,5 @@
+group_column,group_value,label,n_labeled,n_classes,purity,nmi,ari,chi2,p_value
+label_framework,magentic,label_root_cause_category,44,7,0.45454545454545453,0.20581141813429335,0.05807480049808856,22.97871794871795,0.027907164341168925
+label_framework,magentic,label_num_failures,44,14,0.3409090909090909,0.24236531622492638,0.04791127650486771,29.494505494505496,0.28907937364253267
+label_framework,tau_retail,label_root_cause_category,29,7,0.27586206896551724,0.0,0.0,,
+label_framework,tau_retail,label_num_failures,29,4,0.7586206896551724,0.0,0.0,,

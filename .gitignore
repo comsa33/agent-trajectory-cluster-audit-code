@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Raw/gated datasets are downloaded locally and must not be committed.
+data/
+
+# Regenerated per-trajectory files can be large and may reproduce upstream
+# dataset identifiers. Summary CSVs under outputs/ are intentionally tracked.
+outputs/**/trajectory_features.csv
+outputs/**/cluster_assignments.csv
+outputs/**/cluster_scatter.png
+outputs/**/cluster_metrics.png
+outputs/**/pathology_distribution.png
+
+# Local notebooks, logs, and manuscript/submission artifacts.
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.pdf
+*.docx
+*.zip

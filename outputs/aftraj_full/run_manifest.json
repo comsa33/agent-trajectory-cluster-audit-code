@@ -1,0 +1,130 @@
+{
+  "experiment": "aftraj_full",
+  "config_hash": "9901cfd29c1d",
+  "timestamp_utc": "2026-05-18T01:32:31Z",
+  "python": "3.11.11",
+  "platform": "macOS-26.4-arm64-arm-64bit",
+  "seed": 42,
+  "config": {
+    "experiment": {
+      "name": "aftraj_full",
+      "seed": 42,
+      "output_dir": "./outputs/aftraj_full"
+    },
+    "data": {
+      "dataset_type": "aftraj",
+      "input_dir": "./data/external/aftraj",
+      "max_text_chars": 6000,
+      "include_dirs": null,
+      "exclude_dirs": null,
+      "splits": [
+        "safe",
+        "unsafe"
+      ]
+    },
+    "features": {
+      "structural": true,
+      "sequential": true,
+      "behavioral": true
+    },
+    "encoder": {
+      "type": "none",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "batch_size": 32
+    },
+    "clustering": {
+      "type": "auto_kmeans",
+      "mode": "feature",
+      "n_clusters": 6,
+      "k_search_range": [
+        3,
+        12
+      ],
+      "min_cluster_size": 5
+    },
+    "analysis": {
+      "pathology_rule_set": "default",
+      "correlation_targets": [
+        "final_correct",
+        "n_iters",
+        "empty_observation_ratio",
+        "repeated_search_keyword_ratio",
+        "tool_transition_entropy",
+        "hypothesis_persistence"
+      ],
+      "label_columns": [
+        "label_safe_unsafe",
+        "label_mistake_agent",
+        "label_unsafe_source",
+        "label_domain"
+      ],
+      "exemplar_count": 3,
+      "stratify_by": "label_domain",
+      "baselines": [
+        "random",
+        "quantile:n_iters",
+        "quantile:total_tool_calls",
+        "quantile:retry_burst_max",
+        "quantile:tool_transition_entropy",
+        "oracle:label_domain"
+      ],
+      "k_sensitivity": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        16
+      ]
+    },
+    "reporting": {
+      "scatter": true,
+      "metrics_bar": true,
+      "pathology_distribution": true,
+      "correlation_table": true,
+      "manifest": true
+    }
+  },
+  "metrics": {
+    "n_trajectories": 2276,
+    "n_clusters": 12,
+    "silhouette": 0.42516006382438315,
+    "calinski_harabasz": 581.8451792510472,
+    "mode": "feature",
+    "clusterer": "auto_kmeans",
+    "encoder": "none",
+    "feature_dim": 26,
+    "text_dim": 0,
+    "extras": {
+      "selected_k": 12,
+      "k_silhouette_scores": {
+        "3": 0.3692980024702968,
+        "4": 0.38617453724781264,
+        "5": 0.4059597180892753,
+        "6": 0.3596058249147637,
+        "7": 0.35892979355195775,
+        "8": 0.3942959691261938,
+        "9": 0.4038432244843318,
+        "10": 0.4152971704995819,
+        "11": 0.4228921824402272,
+        "12": 0.42516006382792
+      }
+    }
+  },
+  "artifacts": {
+    "trajectory_features": "outputs/aftraj_full/trajectory_features.csv",
+    "cluster_assignments": "outputs/aftraj_full/cluster_assignments.csv",
+    "cluster_summary": "outputs/aftraj_full/cluster_summary.csv",
+    "cluster_correlation": "outputs/aftraj_full/cluster_correlation.csv",
+    "cluster_label_validation": "outputs/aftraj_full/cluster_label_validation.csv",
+    "cluster_label_validation_stratified": "outputs/aftraj_full/cluster_label_validation_stratified.csv",
+    "cluster_baseline_comparison": "outputs/aftraj_full/cluster_baseline_comparison.csv",
+    "k_sensitivity": "outputs/aftraj_full/k_sensitivity.csv",
+    "cluster_scatter": "outputs/aftraj_full/cluster_scatter.png",
+    "cluster_metrics": "outputs/aftraj_full/cluster_metrics.png",
+    "pathology_distribution": "outputs/aftraj_full/pathology_distribution.png"
+  }
+}

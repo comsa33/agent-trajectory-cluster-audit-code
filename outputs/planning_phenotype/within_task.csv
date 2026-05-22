@@ -1,0 +1,4 @@
+task_type,n,planning_support,planning_rate,chi2_cluster_vs_planning,p_value
+alfworld,100,3,0.03,,
+gaia,50,26,0.52,0.00348383500557413,0.9982595987549797
+webshop,50,0,0.0,,

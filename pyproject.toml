@@ -1,0 +1,38 @@
+[project]
+name = "trajectory-failure-clustering"
+version = "0.2.0"
+description = "Validation protocol and reproducibility code for auditing unsupervised LLM-agent trajectory clustering claims"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "scipy>=1.11",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+embed = ["sentence-transformers>=2.2"]
+density = ["hdbscan>=0.8.33"]
+data = [
+    "datasets>=2.19",
+    "huggingface-hub>=0.24",
+    "pyarrow>=14.0",
+]
+all = [
+    "sentence-transformers>=2.2",
+    "hdbscan>=0.8.33",
+    "datasets>=2.19",
+    "huggingface-hub>=0.24",
+    "pyarrow>=14.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

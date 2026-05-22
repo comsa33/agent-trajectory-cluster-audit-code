@@ -1,0 +1,13 @@
+baseline,n_clusters,n_clusters_target,label,n_labeled,purity,nmi,ari
+full_features,10,10,label_safe_unsafe,608,0.9555921052631579,0.4761493268119268,0.4884109693057721
+full_features,9,10,label_mistake_agent,247,0.9919028340080972,0.5140839347449928,0.3375626939268987
+random,10,10,label_safe_unsafe,608,0.5986842105263158,0.007480104327937486,0.0015269511159349913
+random,10,10,label_mistake_agent,247,0.5789473684210527,0.008687714606040139,-0.0020853791353100744
+quantile:n_iters,2,10,label_safe_unsafe,608,0.59375,0.002496391479059655,-0.0010385438521988118
+quantile:n_iters,1,10,label_mistake_agent,247,0.5222672064777328,0.0,0.0
+quantile:total_tool_calls,2,10,label_safe_unsafe,608,0.59375,0.002496391479059655,-0.0010385438521988118
+quantile:total_tool_calls,1,10,label_mistake_agent,247,0.5222672064777328,0.0,0.0
+quantile:retry_burst_max,1,10,label_safe_unsafe,608,0.59375,0.0,0.0
+quantile:retry_burst_max,1,10,label_mistake_agent,247,0.5222672064777328,0.0,0.0
+quantile:tool_transition_entropy,1,10,label_safe_unsafe,608,0.59375,0.0,0.0
+quantile:tool_transition_entropy,1,10,label_mistake_agent,247,0.5222672064777328,0.0,0.0

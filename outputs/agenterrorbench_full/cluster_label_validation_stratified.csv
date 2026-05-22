@@ -1,0 +1,16 @@
+group_column,group_value,label,n_labeled,n_classes,purity,nmi,ari,chi2,p_value
+label_task_type,alfworld,label_llm_model,100,3,0.5,0.0,0.0,,
+label_task_type,alfworld,label_critical_failure_module,100,6,0.3,0.0,0.0,,
+label_task_type,alfworld,label_failure_type_first,74,14,0.1891891891891892,0.0,0.0,,
+label_task_type,alfworld,label_failure_module_first,100,6,0.3,0.0,0.0,,
+label_task_type,alfworld,label_won,100,1,,,,,
+label_task_type,gaia,label_llm_model,50,3,0.54,0.17485605211482766,0.16475043960503177,15.141464194373402,0.0044166272373535025
+label_task_type,gaia,label_critical_failure_module,50,5,0.52,0.08288192221066433,0.005816312728256459,7.944667409884801,0.43889380137534684
+label_task_type,gaia,label_failure_type_first,50,13,0.36,0.20403216511418243,0.007579366550946066,23.953140096618355,0.46427956671648385
+label_task_type,gaia,label_failure_module_first,50,5,0.52,0.08288192221066433,0.005816312728256459,7.944667409884801,0.43889380137534684
+label_task_type,gaia,label_won,50,1,,,,,
+label_task_type,webshop,label_llm_model,50,3,0.4,0.0979255815295743,0.0008971535763803931,5.673758865248227,0.05860827196059727
+label_task_type,webshop,label_critical_failure_module,50,5,0.44,0.13845850050922223,0.04591566004860692,14.539007092198581,0.00575935914756712
+label_task_type,webshop,label_failure_type_first,49,10,0.2857142857142857,0.11430776724473063,0.0102968164485324,19.173913043478265,0.02375409325659124
+label_task_type,webshop,label_failure_module_first,50,5,0.44,0.13845850050922223,0.04591566004860692,14.539007092198581,0.00575935914756712
+label_task_type,webshop,label_won,50,1,,,,,

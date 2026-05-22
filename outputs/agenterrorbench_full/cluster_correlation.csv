@@ -1,0 +1,6 @@
+target,test,statistic,p_value,effect_size,effect_size_metric
+final_correct,chi_square,0.0,1.0,0.0,cramers_v
+n_iters,anova_f,397.08152294611693,7.667093644948922e-70,0.8012435988040059,eta_squared
+empty_observation_ratio,anova_f,115.23565772127422,7.2541407919724365e-34,0.5391503642857258,eta_squared
+tool_transition_entropy,anova_f,33.64582705295547,2.6896981603524146e-13,0.2546113472010918,eta_squared
+hypothesis_persistence,anova_f,57.06415503477768,2.820847223014689e-20,0.36682071793480003,eta_squared
